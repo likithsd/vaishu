@@ -1,0 +1,71 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fbe9e7;
+    color: #5d4037;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.heart {
+    font-size: 5rem;
+    color: #e57373;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.button {
+    background-color: #ffab91;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #ff7043;
+}
+
+#message {
+    font-size: 1.5rem;
+    color: #5d4037;
+    margin-top: 40px;
+}
+
+#gif-container {
+    margin-top: 40px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
