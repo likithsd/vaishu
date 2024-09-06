@@ -1,8 +1,61 @@
-function showMessage(message) {
-document.getElementById('message').innerText = message;
-    document.getElementById('gif-container').innerHTML = ''; // Clear the GIF if present
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-function showGif() {
-    document.getElementById('message').innerText = ''; // Clear the message if present
-document.getElementById('gif-container').innerHTML = '<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWtlOGRyb2Mxejl3bWdrdTQwczN2eDhycWQ4NGxqczhzOW5lbDVoNSZlcD12MV9
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: whitesmoke;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    color: #e94d58;
+    margin: 15px 0;
+}
+
+.gif {
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn-group {
+    margin-top: 50px;
+    position: relative;
+    height: 40px;
+}
+
+button {
+    width: 150px;
+    height: inherit;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px gray;
+    border: 2px solid #e94d58;
+}
+
+button.yes-btn {
+    background: #e94d58;
+}
+
+button.no-btn {
+    background: white;
+    color: #e94d58;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
