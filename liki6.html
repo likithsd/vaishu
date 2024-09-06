@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi Kanda, I love you so much. Do you love me, huh?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fbe9e7;
+            color: #5d4037;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            padding: 50px;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+        
+        .heart {
+            font-size: 5rem;
+            color: #e57373;
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .button {
+            background-color: #ffab91;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.5rem;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #ff7043;
+        }
+        
+        #message {
+            font-size: 1.5rem;
+            color: #5d4037;
+            margin-top: 40px;
+        }
+        
+        #gif-container {
+            margin-top: 40px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>kandamma do you love me?</h1>
+        <div class="heart">❤</div>
+        <p>ninna bit iroke agolla kanda and I’d love to take you out for a walk,a special walk.</p>
+        
+        <a href="#" class="button" onclick="showMessage('I love you more my rupanzel')">Yes</a>
+        <a href="#" class="button" onclick="showGif()">Absolutely Yes</a>
+        
+        <p id="message"></p>
+        <div id="gif-container"></div>
+    </div>
+
+    <script>
+        function showMessage(message) {
+            document.getElementById('message').innerText = message;
+            document.getElementById('gif-container').innerHTML = ''; // Clear the GIF if present
+        }
+
+        function showGif() {
+            document.getElementById('message').innerText = ''; // Clear the message if present
+            document.getElementById('gif-container').innerHTML = '<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWtlOGRyb2Mxejl3bWdrdTQwczN2eDhycWQ4NGxqczhzOW5lbDVoNSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3CCXHZWV6F6O9VQ7FL/giphy.gif" alt="Blushing GIF">';
+        }
+    </script>
+</body>
+</html>
