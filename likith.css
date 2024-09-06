@@ -1,71 +1,27 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fbe9e7;
-    color: #5d4037;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
+const yesBtn = document.querySelector(".yes-btn");
+const noBtn = document.querySelector(".no-btn");
+const question = document.querySelector(".question");
+const gif = document.querySelector(".gif");
 
-.container {
-    padding: 50px;
-}
+// Change text and gif when the Yes button is clicked
+yesBtn.addEventListener("click", () => {
+  question.innerHTML = "i love you so much more my rupanzal)";
+  gif.src = "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGI1cW5wMWhpaDF5b3pjdTF0OHZrcHJvaGkzOHJteDhmd245OGRnZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Vuw9m5wXviFIQ/giphy.gif";
+});
 
-h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
+// Make the No button move randomly on hover
+noBtn.addEventListener("mouseover", () => {
+  const wrapper = document.querySelector(".wrapper");
+  const wrapperRect = wrapper.getBoundingClientRect();
+  const noBtnRect = noBtn.getBoundingClientRect();
 
-p {
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-}
+  // Calculate max positions to ensure the button stays within the wrapper
+  const maxX = wrapperRect.width - noBtnRect.width;
+  const maxY = wrapperRect.height - noBtnRect.height;
 
-.heart {
-    font-size: 5rem;
-    color: #e57373;
-    animation: heartbeat 1.5s infinite;
-}
+  const randomX = Math.floor(Math.random() * maxX);
+  const randomY = Math.floor(Math.random() * maxY);
 
-@keyframes heartbeat {
-    0% { transform: scale(1); }
-    25% { transform: scale(1.1); }
-    50% { transform: scale(1); }
-    75% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
-.button {
-    background-color: #ffab91;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.5rem;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 25px;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #ff7043;
-}
-
-#message {
-    font-size: 1.5rem;
-    color: #5d4037;
-    margin-top: 40px;
-}
-
-#gif-container {
-    margin-top: 40px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
-}
+  noBtn.style.left = randomX + "px";
+  noBtn.style.top = randomY + "px";
+});
